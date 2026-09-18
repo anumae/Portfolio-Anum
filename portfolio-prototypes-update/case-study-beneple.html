@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Beneple — Case Study | Anum Abdullah</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,800&family=Outfit:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+--bg:#0D0D0D;--surface:#1A1A1A;--surface2:#242220;
+--accent:#C08A3E;--accent2:#E8C077;--accent4:#D9A85C;
+--text:#F2F0EC;--text-muted:#B0AEA5;--text-light:#726F68;
+--gradient:linear-gradient(135deg,#C08A3E,#E8C077,#8C6A3F);
+--shadow-hover:0 16px 44px rgba(192,138,62,.18),0 4px 14px rgba(192,138,62,.08);
+}
+body{background:var(--bg);color:var(--text);font-family:'Outfit',sans-serif;line-height:1.75;padding-bottom:60px}
+h1,h2,h3{font-family:'Playfair Display',serif;font-weight:700}
+a{color:var(--accent2);text-decoration:none;transition:.3s}
+a:hover{color:var(--accent)}
+.top-nav{padding:20px 32px;max-width:820px;margin:0 auto;display:flex;gap:24px}
+.back-link{font-size:.85rem;font-weight:600;color:var(--text-muted)}
+.back-link:hover{color:var(--accent2)}
+.hero{max-width:820px;margin:0 auto;padding:20px 32px 30px}
+.tag-row{display:flex;flex-wrap:wrap;gap:6px;margin-bottom:16px}
+.tag{font-size:.68rem;font-weight:600;padding:4px 10px;border-radius:20px;background:rgba(242,240,236,.06);color:var(--text-muted);border:1px solid rgba(242,240,236,.08)}
+.tag.role{background:rgba(192,138,62,.12);color:var(--accent2);border-color:rgba(192,138,62,.25)}
+.hero h1{font-size:2.4rem;margin-bottom:12px}
+.hero .subtitle{color:var(--text-muted);font-size:1.05rem;max-width:640px}
+.hero-image{max-width:1000px;margin:30px auto;padding:0 32px}
+.hero-image .frame{border-radius:16px;overflow:hidden;border:1.5px solid rgba(242,240,236,.08);box-shadow:var(--shadow-hover)}
+.hero-image img{width:100%;display:block}
+.content{max-width:820px;margin:0 auto;padding:0 32px}
+.section{margin-bottom:44px}
+.section-label{font-size:.72rem;text-transform:uppercase;letter-spacing:2px;color:var(--accent2);font-weight:700;margin-bottom:12px}
+.section h2{font-size:1.5rem;margin-bottom:14px}
+.section p{color:var(--text-muted);margin-bottom:12px}
+.decision-box{background:var(--surface2);border-left:3px solid var(--accent);border-radius:10px;padding:20px 22px;margin:18px 0}
+.decision-box p{color:var(--text);margin-bottom:0}
+.owned-list{list-style:none;margin:0}
+.owned-list li{padding:10px 0 10px 22px;position:relative;border-bottom:1px solid rgba(242,240,236,.06);color:var(--text-muted)}
+.owned-list li:last-child{border-bottom:none}
+.owned-list li::before{content:"—";position:absolute;left:0;color:var(--accent2)}
+.owned-list strong{color:var(--text);font-weight:600}
+.outcome-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px;margin-top:8px}
+.stat{background:var(--surface);border-radius:14px;padding:20px;border:1px solid rgba(242,240,236,.07)}
+.stat .num{font-family:'Playfair Display',serif;font-size:1.5rem;color:var(--accent2);font-weight:700}
+.stat .label{font-size:.82rem;color:var(--text-muted);margin-top:4px}
+.footer-cta{max-width:800px;margin:60px auto 0;padding:40px 32px 0;text-align:center;border-top:1px solid rgba(242,240,236,.08)}
+.footer-links{display:flex;gap:20px;justify-content:center;margin-top:16px;flex-wrap:wrap}
+.cta-row{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-top:20px}
+.cta-btn{display:inline-flex;align-items:center;gap:8px;padding:12px 26px;border-radius:50px;background:var(--gradient);color:#0D0D0D;font-weight:700;font-size:.88rem}
+.cta-btn.secondary{background:transparent;border:1.5px solid rgba(242,240,236,.15);color:var(--text)}
+@media(max-width:600px){.outcome-grid{grid-template-columns:1fr}.hero h1{font-size:1.9rem}}
+</style>
+</head>
+<body>
+
+<div class="top-nav">
+<a href="index.html" class="back-link">← All Prototypes</a>
+<a href="../" class="back-link">Full Portfolio</a>
+</div>
+
+<div class="hero">
+<div class="tag-row">
+<span class="tag">HRMS / HR-Tech · UAE</span>
+<span class="tag role">HRIS Modernization</span>
+</div>
+<h1>Beneple <span style="font-size:1.1rem;color:var(--text-light);font-weight:500">(BSTG)</span></h1>
+<p class="subtitle">A modernized HRIS covering the employee lifecycle — onboarding, salary, recruitment, and training — sequenced around adoption before analytics.</p>
+</div>
+
+<div class="hero-image">
+<div class="frame"><img src="images/live-demo-beneple.png" alt="Beneple HR dashboard prototype"></div>
+</div>
+
+<div class="content">
+
+<div class="section">
+<span class="section-label">The Challenge</span>
+<h2>Four modules competing for the first release</h2>
+<p>Onboarding, recruitment, leave management, and insurance administration were all in scope for modernization, each with its own stakeholder group (HR ops, line managers, employees themselves) and its own definition of "done." Building all four with equal depth in one release risked shipping four half-finished modules instead of one that actually worked end-to-end.</p>
+</div>
+
+<div class="section">
+<span class="section-label">The Decision</span>
+<h2>Adoption first, reporting depth second</h2>
+<div class="decision-box">
+<p>I sequenced employee-facing self-service workflows — leave requests, recruitment status, insurance enrollment — ahead of deeper HR analytics and reporting. The reasoning: a modernized HRIS only pays off once employees actually use it day-to-day; reporting depth is only valuable once there's real usage data to report on.</p>
+</div>
+</div>
+
+<div class="section">
+<span class="section-label">What I Owned</span>
+<ul class="owned-list">
+<li><strong>Module sequencing</strong> — prioritized leave request, recruitment, and insurance self-service flows for the initial release</li>
+<li><strong>Prototype build</strong> — coded the employee dashboard covering headcount, retention, pending requests, and the interactive leave/recruitment/insurance demo flows</li>
+<li><strong>Lifecycle mapping</strong> — structured the platform around the full employee lifecycle rather than a single HR function in isolation</li>
+</ul>
+</div>
+
+<div class="section">
+<span class="section-label">Outcome</span>
+<!-- TODO(Anum): replace with a verified metric once available — e.g. headcount managed, modules live, retention rate, time-to-fill -->
+<div class="outcome-grid">
+<div class="stat"><div class="num">3</div><div class="label">Self-service workflows shipped first: leave, recruitment, insurance</div></div>
+<div class="stat"><div class="num">1</div><div class="label">Unified employee lifecycle system, replacing siloed processes</div></div>
+</div>
+</div>
+
+</div>
+
+<div class="footer-cta">
+<h3>Want the Full Walkthrough?</h3>
+<p style="color:var(--text-muted);font-size:.9rem;margin-top:10px">Happy to walk through the module sequencing and dashboard live on a call.</p>
+<div class="cta-row">
+<a href="https://anumae.github.io/Beneple/" target="_blank" class="cta-btn">Launch Live Demo</a>
+<a href="index.html" class="cta-btn secondary">Back to All Prototypes</a>
+</div>
+<div class="footer-links">
+<a href="mailto:Anum.abdullah.598@gmail.com">Anum.abdullah.598@gmail.com</a>
+<a href="https://linkedin.com/in/anum-pmp" target="_blank">LinkedIn</a>
+</div>
+</div>
+
+</body>
+</html>
